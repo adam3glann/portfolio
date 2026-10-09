@@ -101,94 +101,6 @@ button { font: inherit; }
 .project-link span { transition: transform .2s; }
 .project-link:hover span { transform: translate(2px,-2px); }
 
-/* Nuvanti: a full-width conceptual storefront, intentionally not a screenshot */
-.project--01 .project-main { display: flex; flex-direction: column; align-items: stretch; gap: 24px; }
-.project--01 .project-visual { width: 100%; min-height: 600px; background: #ddd9cf; }
-.mockup-disclaimer { position: absolute; z-index: 4; top: 15px; right: 17px; color: #60635a; font-size: 6px; }
-.nuvanti-window { position: absolute; inset: 6% 5%; display: grid; grid-template-columns: 1fr .92fr; grid-template-rows: 53px 1fr 32px; background: #f7f5ef; overflow: hidden; }
-.nuvanti-nav { grid-column: 1/-1; display: flex; align-items: center; gap: clamp(14px,3vw,40px); padding-inline: 4%; border-bottom: 1px solid #d7d5cc; color: #4f544a; font: 7px var(--mono); }
-.nuvanti-nav strong { margin-right: auto; color: #20231e; font: 600 13px var(--sans); letter-spacing: .13em; }
-.nuvanti-copy { align-self: center; padding: 9% 12%; }
-.nuvanti-copy>span:first-child { color: #73766d; font-size: 6px; }
-.nuvanti-copy h4 { margin: 20px 0 14px; color: #252720; font: 400 clamp(44px,6vw,82px)/.88 var(--serif); letter-spacing: -.03em; }
-.nuvanti-copy p { color: #777970; font: 10px/1.7 var(--sans); }
-.nuvanti-cta { display: inline-block; margin-top: 17px; padding-bottom: 5px; border-bottom: 1px solid var(--green); color: var(--green); font: 7px var(--mono); }
-.nuvanti-product { position: relative; margin: 6% 8% 8% 0; display: grid; place-items: center; background: #cec9bd; overflow: hidden; }
-.nuvanti-product::before,.nuvanti-product::after { position: absolute; content: ""; border: 1px solid #5366533d; }
-.nuvanti-product::before { inset: 8% 9%; }
-.nuvanti-product::after { top: 0; bottom: 0; left: 50%; border-left: 0; }
-.nuvanti-product>span { position: absolute; right: 12px; bottom: 10px; z-index: 2; color: #65685e; font: 6px var(--mono); }
-.fashion-shape { position: relative; z-index: 1; width: 37%; height: 76%; background: #55594e; clip-path: polygon(31% 0,69% 0,78% 11%,100% 24%,84% 38%,76% 30%,82% 100%,18% 100%,24% 30%,16% 38%,0 24%,22% 11%); filter: drop-shadow(15px 18px 10px #34382d30); transition: transform .55s cubic-bezier(.2,.75,.25,1); }
-.fashion-shape::after { position: absolute; top: 0; left: 49%; height: 36%; border-left: 1px solid #f4f1e947; content: ""; }
-.project--01:hover .fashion-shape { transform: scale(1.04); }
-.nuvanti-baseline { grid-column: 1/-1; display: flex; align-items: center; justify-content: space-between; gap: 14px; padding-inline: 4%; color: #777970; font-size: 6px; }
-.project--01 .project-copy { display: grid; grid-template-columns: minmax(0,.8fr) minmax(300px,1fr); column-gap: clamp(35px,7vw,100px); align-items: start; }
-.project--01 .project-copy h3 { grid-column: 1; grid-row: 1/span 2; font-size: clamp(58px,8vw,104px); }
-.project--01 .project-description,.project--01 .project-tags,.project--01 .case-study,.project--01 .project-link { grid-column: 2; }
-
-/* PadelSync: booking flow concept */
-.project--02 .project-main { grid-template-columns: minmax(0,.78fr) minmax(0,1.22fr); }
-.project--02 .project-copy { order: 1; }
-.project--02 .project-visual { order: 2; min-height: 470px; background: #dfe4da; }
-.padel-window { position: absolute; inset: 7% 5%; display: grid; grid-template-columns: 22% 78%; background: #f7f6f0; overflow: hidden; }
-.padel-side { position: relative; display: flex; flex-direction: column; gap: 14px; padding: 25px 13px; color: #e8e9e1; background: #252b25; font-size: 7px; }
-.padel-side strong { font-size: 9px; letter-spacing: .12em; }
-.padel-side>span { color: #aab5a2; font-size: 6px; }
-.padel-side i { padding: 7px 4px; color: #c8cbc2; font-style: normal; }
-.padel-side i:first-of-type { border-left: 1px solid #9eaf96; color: #eff0e9; }
-.padel-side-foot { position: absolute; bottom: 14px; left: 13px; }
-.padel-main { padding: clamp(16px,3vw,35px); }
-.padel-top { display: flex; justify-content: space-between; gap: 10px; border-bottom: 1px solid #d8d8cf; padding-bottom: 10px; color: #797b73; font-size: 6px; }
-.padel-main h4 { margin: 21px 0 4px; font: 400 clamp(27px,3.5vw,44px)/1 var(--serif); }
-.padel-main>p { margin: 0; color: #777970; font-size: 7px; }
-.booking-steps { display: flex; align-items: center; gap: 8px; margin: 20px 0 13px; color: #696c63; font: 6px var(--mono); }
-.booking-steps span { white-space: nowrap; }
-.booking-steps b { padding-right: 3px; color: var(--green); font-weight: 400; }
-.booking-steps i { flex: 1; border-top: 1px solid #c8cac0; }
-.booking-panel { display: grid; grid-template-columns: 1fr .8fr; gap: 12px; min-height: 168px; }
-.court-illustration { position: relative; display: grid; place-items: center; min-height: 155px; background: #dce3d9; overflow: hidden; }
-.court-lines { position: absolute; inset: 12% 22%; border: 1px solid #53665380; }
-.court-lines::before { position: absolute; inset: 0 50%; border-left: 1px solid #53665380; content: ""; }
-.court-lines::after { position: absolute; inset: 50% 0 auto; border-top: 1px solid #53665380; content: ""; }
-.court-dot { position: absolute; width: 7px; height: 7px; border-radius: 50%; background: #536653; }
-.booking-select { display: flex; flex-direction: column; gap: 7px; color: #4d5149; font-size: 6px; }
-.booking-select>span { color: var(--green); font-size: 6px; }
-.booking-select strong { margin-bottom: 4px; font-size: 8px; font-weight: 600; }
-.booking-select>div { display: flex; justify-content: space-between; gap: 4px; border-bottom: 1px solid #d4d4cb; padding: 5px 0; color: #777970; }
-.booking-select>div b { color: var(--green); font-weight: 400; }
-.booking-select button { min-height: 25px; margin-top: auto; border: 0; color: #f7f6f0; background: #a4aa9e; font: 6px var(--mono); }
-
-/* Restaurant reservation flow concept */
-.project--03 .project-main { grid-template-columns: minmax(0,1.15fr) minmax(0,.85fr); align-items: end; }
-.project--03 .project-visual { min-height: 390px; background: #d9d0c4; }
-.project--03 .project-copy { padding: 20px 0 36px clamp(0px,2vw,28px); }
-.restaurant-window { position: absolute; inset: 7% 6%; display: grid; grid-template-columns: 23% 77%; background: #f4f1e9; overflow: hidden; }
-.restaurant-side { display: flex; flex-direction: column; gap: 13px; padding: 22px 12px; color: #f0ebe3; background: #302d28; font-size: 7px; }
-.restaurant-side strong { font: 600 8px var(--sans); letter-spacing: .08em; }
-.restaurant-side>span { margin-bottom: 8px; color: #c1ad99; font-size: 6px; }
-.restaurant-side i { padding: 7px 4px; color: #d3ccc2; font-style: normal; }
-.restaurant-side i:first-of-type { border-left: 1px solid #c3a78d; color: #fff8ef; }
-.restaurant-main { padding: clamp(14px,2.5vw,27px); }
-.restaurant-top { display: flex; justify-content: space-between; gap: 8px; border-bottom: 1px solid #dbd7ce; padding-bottom: 10px; color: #777970; font-size: 6px; }
-.restaurant-main h4 { margin: 20px 0 4px; font: 400 clamp(26px,3vw,40px)/1 var(--serif); }
-.restaurant-main>p { margin: 0; color: #777970; font-size: 7px; }
-.service-steps { display: flex; align-items: center; gap: 9px; margin: 20px 0 13px; color: #696a62; font: 6px var(--mono); white-space: nowrap; }
-.service-steps i { flex: 1; border-top: 1px solid #c8c3b9; }
-.reservation-sheet { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-.reservation-field { min-height: 115px; display: flex; flex-direction: column; gap: 8px; border-top: 1px solid #b9b3a8; padding-top: 9px; }
-.reservation-field>span { color: #806c59; font-size: 6px; }
-.reservation-field b { border-bottom: 1px solid #ded9cf; padding: 5px 0; color: #65665e; font-size: 6px; font-weight: 400; }
-
-/* Small supporting study */
-.project--04 .project-main { grid-template-columns: minmax(0,.85fr) minmax(0,1.15fr); }
-.project--04 .project-copy { order: 1; }
-.project--04 .project-visual { order: 2; min-height: 280px; background: #dfe1d8; }
-.inventory-lines { position: absolute; top: 22%; right: 12%; left: 12%; display: grid; gap: 10px; }
-.inventory-lines span { display: flex; justify-content: space-between; border-bottom: 1px solid #53665345; padding: 8px 10px; color: #3d473a; font: 8px var(--mono); }
-.inventory-lines span:first-child { background: #53665313; }
-.inventory-lines i { color: #777970; font-style: normal; }
-.inventory-lines b { color: var(--green); font-weight: 400; }
-
 /* About and toolkit */
 .about { width: 100%; max-width: none; display: grid; grid-template-columns: minmax(0,.85fr) minmax(0,1fr); gap: 10vw; padding: clamp(80px,10vw,140px) max(var(--gutter), calc((100vw - var(--measure))/2 + var(--gutter))); color: var(--paper); background: #20231e; }
 .about .section-no { color: #b5c2ad; }
@@ -264,9 +176,6 @@ button { font: inherit; }
   .hero h1 { font-size: clamp(57px,7vw,74px); }
   .hero-visual { height: clamp(400px,58vw,570px); }
   .project--01 .project-visual { min-height: 500px; }
-  .padel-window { inset: 6% 4%; }
-  .padel-side { padding-inline: 8px; }
-  .padel-main { padding: 16px; }
   .project--03 .project-visual { min-height: 340px; }
   .company { min-height: 390px; }
 }
@@ -308,46 +217,13 @@ button { font: inherit; }
   .project-number { max-width: 278px; font-size: 6px; }
   .project--01 .project-main { gap: 15px; }
   .project--01 .project-visual { min-height: 420px; }
-  .nuvanti-window { inset: 9% 4%; grid-template-columns: 1fr .9fr; grid-template-rows: 38px 1fr 25px; }
-  .nuvanti-nav { gap: 10px; font-size: 5px; }
-  .nuvanti-nav strong { font-size: 9px; }
-  .nuvanti-copy { padding: 9% 8%; }
-  .nuvanti-copy h4 { margin: 16px 0 10px; font-size: clamp(36px,10vw,57px); }
-  .nuvanti-copy p { font-size: 7px; }
-  .nuvanti-copy>span:first-child,.nuvanti-cta { font-size: 5px; }
-  .nuvanti-product { margin: 9% 7% 9% 0; }
-  .nuvanti-baseline { font-size: 5px; }
   .project--01 .project-copy { display: block; }
   .project--01 .project-copy h3 { font-size: 66px; }
   .project--02 .project-main,.project--03 .project-main,.project--04 .project-main { grid-template-columns: 1fr; gap: 14px; }
   .project--02 .project-copy,.project--02 .project-visual,.project--03 .project-copy,.project--03 .project-visual,.project--04 .project-copy,.project--04 .project-visual { order: initial; }
   .project--02 .project-visual { min-height: 405px; }
-  .padel-window { inset: 7% 4%; grid-template-columns: 19% 81%; }
-  .padel-side { gap: 9px; padding: 17px 6px; font-size: 6px; }
-  .padel-side strong { font-size: 6px; }
-  .padel-side>span { font-size: 5px; }
-  .padel-side i { padding: 6px 2px; font-size: 5px; }
-  .padel-side-foot { left: 6px; font-size: 5px; }
-  .padel-main { padding: 13px; }
-  .padel-main h4 { font-size: 30px; }
-  .booking-steps { gap: 4px; font-size: 5px; }
-  .booking-steps b { padding-right: 1px; }
-  .booking-panel { grid-template-columns: 1fr; }
-  .court-illustration { min-height: 130px; }
-  .booking-select { display: grid; grid-template-columns: 1fr 1fr; }
-  .booking-select>span,.booking-select strong,.booking-select button { grid-column: 1/-1; }
   .project--03 .project-visual,.project--04 .project-visual { min-height: 300px; }
   .project--03 .project-copy { padding: 8px 0 0; }
-  .restaurant-window { inset: 7% 4%; grid-template-columns: 20% 80%; }
-  .restaurant-side { gap: 9px; padding: 16px 6px; font-size: 6px; }
-  .restaurant-side strong { font-size: 6px; }
-  .restaurant-side>span { font-size: 5px; }
-  .restaurant-side i { padding: 5px 2px; font-size: 5px; }
-  .restaurant-main { padding: 13px; }
-  .restaurant-main h4 { font-size: 30px; }
-  .service-steps { gap: 4px; font-size: 5px; }
-  .reservation-sheet { grid-template-columns: 1fr 1fr; gap: 7px; }
-  .reservation-field { min-height: 96px; }
   .project-copy { padding: 7px 0 0; }
   .project-copy h3 { font-size: 43px; }
   .project-description { font-size: 10px; }
@@ -396,9 +272,6 @@ button { font: inherit; }
   .hero-action { font-size: 6px; }
   .focus-line { grid-template-columns: 39px 1fr auto; gap: 5px; }
   .focus-line p { font-size: 5.5px; }
-  .nuvanti-window { inset: 9% 3%; }
-  .nuvanti-nav { gap: 7px; }
-  .nuvanti-copy h4 { font-size: 35px; }
   .tool-row { grid-template-columns: 94px 1fr; }
   .tool-row p { font-size: 7px; }
   .footer-phrase { letter-spacing: .03em; }
@@ -406,4 +279,44 @@ button { font: inherit; }
 @media (prefers-reduced-motion: reduce) {
   *,*::before,*::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
   .js-motion .reveal { opacity: 1; transform: none; }
+}
+
+/* Real project images and clearly identified project title cards */
+.hero-visual { border: 1px solid #73766d; overflow: hidden; background: #242721; }
+.hero-visual img { object-fit: cover; object-position: center 42%; }
+.hero-image-note { position: absolute; right: 0; bottom: 0; left: 0; display: flex; justify-content: space-between; align-items: center; padding: 15px 17px; color: #fff; background: linear-gradient(transparent, #111310dc); font-size: 7px; }
+.hero-image-note a { color: #fff; text-decoration: underline; text-underline-offset: 4px; }
+.project--01 .project-main { display: flex; flex-direction: column; align-items: stretch; gap: 24px; }
+.project--01 .project-visual { width: 100%; min-height: 560px; display: grid; grid-template-columns: 1.18fr .82fr; grid-template-rows: 1fr 1fr; gap: 10px; padding: 10px; background: #d9d6ce; }
+.nuvanti-photo { position: relative; min-width: 0; min-height: 0; margin: 0; overflow: hidden; background: #bbb8af; }
+.nuvanti-photo--primary { grid-row: span 2; }
+.nuvanti-photo img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform .55s cubic-bezier(.2,.75,.25,1); }
+.nuvanti-photo:hover img { transform: scale(1.035); }
+.nuvanti-photo figcaption { position: absolute; right: 0; bottom: 0; left: 0; padding: 13px; color: #fff; font: 7px var(--mono); background: linear-gradient(transparent,#111310b8); }
+.project--01 .project-copy { display: grid; grid-template-columns: minmax(0,.8fr) minmax(300px,1fr); column-gap: clamp(35px,7vw,100px); align-items: start; }
+.project--01 .project-copy h3 { grid-column: 1; grid-row: 1/span 2; font-size: clamp(58px,8vw,104px); }
+.project--01 .project-description,.project--01 .project-tags,.project--01 .case-study,.project--01 .project-link { grid-column: 2; }
+.project--02 .project-main,.project--04 .project-main { grid-template-columns: minmax(0,.82fr) minmax(0,1.18fr); }
+.project--02 .project-visual,.project--04 .project-visual { order: 2; }
+.project--02 .project-copy,.project--04 .project-copy { order: 1; }
+.project--02 .project-visual,.project--03 .project-visual,.project--04 .project-visual { min-height: 340px; }
+.project--03 .project-main { grid-template-columns: minmax(0,1.15fr) minmax(0,.85fr); align-items: center; }
+.project-placeholder { min-height: inherit; display: flex; flex-direction: column; justify-content: space-between; padding: clamp(25px,5vw,62px); color: var(--paper); background: #252821; }
+.project-placeholder::after { position: absolute; right: 8%; bottom: 15%; width: 30%; height: 1px; background: #a8b29e; content: ""; transform: rotate(-38deg); transform-origin: right; opacity: .65; }
+.project-placeholder--restaurant { color: #f3e9dc; background: #342e29; }
+.project-placeholder--inventory { color: #e6e8dc; background: #30372f; }
+.placeholder-kicker,.placeholder-note { position: relative; z-index: 1; font-size: 7px; letter-spacing: .09em; }
+.placeholder-title { position: relative; z-index: 1; margin: 0; font: 400 clamp(45px,8vw,96px)/.9 var(--serif); letter-spacing: -.04em; }
+.placeholder-note { max-width: 300px; color: #c0c2b8; line-height: 1.8; }
+.project-visual .project-placeholder { position: absolute; inset: 0; }
+@media (max-width: 900px) {
+  .project--01 .project-visual { min-height: 500px; }
+}
+@media (max-width: 640px) {
+  .project--01 .project-visual { min-height: 430px; grid-template-columns: 1fr 1fr; gap: 7px; padding: 7px; }
+  .project--01 .project-copy { display: block; }
+  .project--02 .project-main,.project--03 .project-main,.project--04 .project-main { grid-template-columns: 1fr; gap: 14px; }
+  .project--02 .project-copy,.project--02 .project-visual,.project--03 .project-copy,.project--03 .project-visual,.project--04 .project-copy,.project--04 .project-visual { order: initial; }
+  .project--02 .project-visual,.project--03 .project-visual,.project--04 .project-visual { min-height: 300px; }
+  .project--03 .project-copy { padding: 8px 0 0; }
 }

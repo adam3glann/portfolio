@@ -2,7 +2,7 @@
 
 A lightweight, editorial portfolio built with semantic HTML, CSS, and vanilla JavaScript. There is no build step or runtime dependency. Project content is maintained in the `projects` array near the top of `script.js`.
 
-The architectural hero is a local SVG illustration. The Nuvanti, PadelSync, and restaurant project panels are conceptual HTML/CSS interface visuals, visibly labeled as concepts rather than screenshots of the live products. No project screenshot assets were present in the repository.
+The hero and Nuvanti gallery use genuine product photography observed on the live [Nuvanti storefront](https://nuvanti.wuiltstore.com/en). The files are local copies so the portfolio does not depend on the store's image host to load them. PadelSync, Restaurant Management System, and Inventory & Sales Tracker are presented with project identity cards because no verified screenshots for them were available in the repository or accessible project pages. Those cards are not interface screenshots. ARQEVIN remains a separate company venture.
 
 ## Run locally
 

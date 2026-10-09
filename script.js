@@ -118,25 +118,14 @@ list.innerHTML = projects
   <article class="project project--${escapeHtml(project.number)}" id="project-${escapeHtml(project.number)}">
     <div class="project-top"><span class="mono project-number">${escapeHtml(project.number)} <i>—</i> ${escapeHtml(project.category)}</span></div>
     <div class="project-main">
-      <div class="project-visual visual-${escapeHtml(project.visual)}" role="img" aria-label="Conceptual visual: ${escapeHtml(project.visualLabel)}">
+      <div class="project-visual visual-${escapeHtml(project.visual)}">
         ${project.visual === "nuvanti" ? `
-          <div class="mockup-disclaimer mono">CONCEPTUAL STORE VISUAL · NOT A PROJECT SCREENSHOT</div>
-          <div class="nuvanti-window">
-            <div class="nuvanti-nav"><strong>NUVANTI</strong><span>COLLECTION</span><span>ABOUT</span><span>SEARCH&nbsp; ↗</span></div>
-            <div class="nuvanti-copy"><span class="mono">CLOTHING / INDEPENDENT PROJECT</span><h4>Clothing<br />collection.</h4><p>Product presentation<br />for a clothing brand.</p><span class="nuvanti-cta">VIEW COLLECTION&nbsp; ↗</span></div>
-            <div class="nuvanti-product" aria-hidden="true"><div class="fashion-shape"></div><span>ABSTRACT FORM STUDY</span></div>
-            <div class="nuvanti-baseline mono"><span>AN E-COMMERCE EXPERIENCE</span><span>CONCEPT VISUAL / NOT A SCREENSHOT</span></div>
-          </div>` : ""}
-        ${project.visual === "padel" ? `
-          <div class="mockup-disclaimer mono">CONCEPTUAL INTERFACE · NOT A PROJECT SCREENSHOT</div>
-          <div class="padel-window">
-            <aside class="padel-side"><strong>PADELSYNC</strong><span class="mono">MEMBER SPACE</span><i>Find a court</i><i>My bookings</i><i>Account</i><span class="padel-side-foot mono">MIU · SWE230</span></aside>
-            <div class="padel-main"><div class="padel-top mono"><span>RESERVATIONS / NEW</span><span>MEMBER&nbsp; ↗</span></div><h4>Find a court.</h4><p>Choose a court and a time to continue.</p><div class="booking-steps"><span><b>01</b> COURT</span><i></i><span><b>02</b> TIME</span><i></i><span><b>03</b> CONFIRM</span></div><div class="booking-panel"><div class="court-illustration"><div class="court-lines"><i></i><i></i></div><span class="court-dot"></span></div><div class="booking-select"><span class="mono">YOUR RESERVATION</span><strong>Select a court</strong><div>Choose a date <b>＋</b></div><div>Choose a time <b>＋</b></div><button type="button" disabled>CONTINUE</button></div></div></div>
-          </div>` : ""}
-        ${project.visual === "restaurant" ? `
-          <div class="mockup-disclaimer mono">CONCEPTUAL INTERFACE · NOT A PROJECT SCREENSHOT</div>
-          <div class="restaurant-window"><aside class="restaurant-side"><strong>JUICY LUCY</strong><span class="mono">MANAGEMENT</span><i>Reservations</i><i>Tables</i><i>Menu</i><i>Checkout</i></aside><div class="restaurant-main"><div class="restaurant-top"><span class="mono">SERVICE DESK / RESERVATION</span><span>STAFF VIEW</span></div><h4>Guest booking</h4><p>Manage a reservation from table to checkout.</p><div class="service-steps"><span>01&nbsp; TABLE</span><i></i><span>02&nbsp; MEALS</span><i></i><span>03&nbsp; CHECKOUT</span></div><div class="reservation-sheet"><div class="reservation-field"><span class="mono">RESERVATION</span><b>Select a guest</b><b>Select table & time</b></div><div class="reservation-field"><span class="mono">ORDER</span><b>Add meals from menu</b><b>Review and check out&nbsp; ↗</b></div></div></div></div>` : ""}
-        ${project.visual === "inventory" ? '<div class="inventory-lines"><span><i>PRODUCT</i><b>STOCK IN</b></span><span><i>CATALOG</i><b>UPDATE</b></span><span><i>SALES</i><b>RECORD</b></span></div><div class="visual-footer mono"><span>INVENTORY & SALES</span><span>RECORD / UPDATE</span></div>' : ""}
+          <figure class="nuvanti-photo nuvanti-photo--primary"><img src="/assets/nuvanti-sweatpants.webp" alt="Nuvanti sweatpants product photography from the live store" loading="lazy" /><figcaption>NUV SWEATPANTS</figcaption></figure>
+          <figure class="nuvanti-photo"><img src="/assets/nuvanti-embroidered-top.webp" alt="Nuvanti embroidered top product photography from the live store" loading="lazy" /><figcaption>EMBROIDERED TOP</figcaption></figure>
+          <figure class="nuvanti-photo"><img src="/assets/nuvanti-polo.webp" alt="Nuvanti knitted polo product photography from the live store" loading="lazy" /><figcaption>KNITTED POLO</figcaption></figure>` : ""}
+        ${project.visual === "padel" ? `<div class="project-placeholder" role="img" aria-label="PadelSync project identity card; no project screenshots available"><span class="placeholder-kicker mono">PADELSYNC / MIU SWE230</span><h4 class="placeholder-title">Court<br />booking.</h4><span class="placeholder-note">Project screenshots unavailable<br />Four-student university project</span></div>` : ""}
+        ${project.visual === "restaurant" ? `<div class="project-placeholder project-placeholder--restaurant" role="img" aria-label="Restaurant Management System project identity card; no screenshots available"><span class="placeholder-kicker mono">JUICY LUCY / SYSTEMS PROJECT</span><h4 class="placeholder-title">Restaurant<br />operations.</h4><span class="placeholder-note">Project screenshots unavailable<br />Reservations · tables · menu · checkout</span></div>` : ""}
+        ${project.visual === "inventory" ? `<div class="project-placeholder project-placeholder--inventory" role="img" aria-label="Inventory and Sales Tracker project identity card; no screenshots available"><span class="placeholder-kicker mono">ACADEMIC PROJECT / C++</span><h4 class="placeholder-title">Inventory<br />& sales.</h4><span class="placeholder-note">Project screenshots unavailable<br />Product and transaction tracking</span></div>` : ""}
       </div>
       <div class="project-copy"><h3>${escapeHtml(project.name)}</h3><p class="project-description">${escapeHtml(project.description)}</p>
         ${project.tags.length ? `<p class="project-tags"><span class="mono">TECHNOLOGY</span> ${project.tags.map(escapeHtml).join(" · ")}</p>` : ""}
