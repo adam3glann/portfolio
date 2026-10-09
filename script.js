@@ -12,6 +12,7 @@ const projects = [
       "PostgreSQL",
       "Cloudflare",
       "Supabase",
+      "Railway",
     ],
     link: "https://nuvanti-shop.pages.dev/",
     linkLabel: "Visit storefront",
@@ -83,10 +84,10 @@ const projects = [
   {
     number: "03",
     name: "Restaurant Management System",
-    category: "RESTAURANT MANAGEMENT / INTERFACE · JUICY LUCY",
+    category: "RESTAURANT MANAGEMENT / JAVA & DATABASE · JUICY LUCY",
     description:
       "A restaurant management interface for staff to manage tables and menu items, book guests, add meals to reservations, and check out orders.",
-    tags: [],
+    tags: ["Java", "Database"],
     link: null,
     linkLabel: null,
     visual: "restaurant",
@@ -107,16 +108,16 @@ const projects = [
     approach:
       "The supplied screens cover table and menu management, guest reservations, meal selection, and checkout.",
     contribution:
-      "The supplied interface captures illustrate the restaurant workflows. Implementation details beyond the visible screens are unverified.",
+      "The project uses Java and database-backed data. The supplied screenshots show the main staff workflows.",
     more: [],
   },
   {
     number: "04",
     name: "Inventory Management System",
-    category: "INVENTORY MANAGEMENT / C++",
+    category: "INVENTORY MANAGEMENT / JAVA & POSTGRESQL",
     description:
       "A stock management system with workflows for products, inventory monitoring, purchases, sales, returns, employees, and daily reports.",
-    tags: ["C++", "OOP", "Data structures", "File streams"],
+    tags: ["Java", "PostgreSQL"],
     link: null,
     linkLabel: null,
     visual: "inventory",
