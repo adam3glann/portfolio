@@ -13,10 +13,19 @@ const projects = [
       "Cloudflare",
       "Supabase",
     ],
-    link: "https://nuvanti.wuiltstore.com/en",
+    link: "https://nuvanti-shop.pages.dev/",
     linkLabel: "Visit storefront",
     visual: "nuvanti",
-    visualLabel: "Nuvanti / Commerce, considered",
+    visualLabel: "Nuvanti / Storefront and commerce tools",
+    screenshots: [
+      { src: "assets/projects/nuvanti/nuvanti-homepage.png", alt: "Nuvanti storefront homepage featuring the clothing brand", caption: "Storefront / Homepage" },
+      { src: "assets/projects/nuvanti/nuvanti-featured-products.png", alt: "Nuvanti featured clothing collection page", caption: "Storefront / Featured collection" },
+      { src: "assets/projects/nuvanti/nuvanti-shop-all.png", alt: "Nuvanti shop all page with clothing products", caption: "Storefront / Shop all" },
+      { src: "assets/projects/nuvanti/nuvanti-collection-home.png", alt: "Nuvanti storefront collection and best sellers", caption: "Storefront / Collection" },
+      { src: "assets/projects/nuvanti/nuvanti-admin-dashboard.png", alt: "Nuvanti commerce admin dashboard with order and sales summaries", caption: "Commerce tools / Dashboard" },
+      { src: "assets/projects/nuvanti/nuvanti-storefront-settings.png", alt: "Nuvanti admin settings for storefront homepage content", caption: "Commerce tools / Storefront settings" },
+      { src: "assets/projects/nuvanti/nuvanti-product-inventory.png", alt: "Nuvanti product inventory management screen", caption: "Commerce tools / Product inventory" },
+    ],
     challenge:
       "Create a clear storefront and connected commerce workflows for a clothing brand.",
     approach:
@@ -46,7 +55,19 @@ const projects = [
     link: null,
     linkLabel: null,
     visual: "padel",
-    visualLabel: "PadelSync / Court availability",
+    visualLabel: "PadelSync / Booking and club management screens",
+    screenshots: [
+      { src: "assets/projects/padelsync/padelsync-homepage.png", alt: "PadelSync homepage for The Glass Court", caption: "PadelSync / Homepage" },
+      { src: "assets/projects/padelsync/padelsync-sign-in.png", alt: "PadelSync sign in page alongside a court photograph", caption: "Member access / Sign in" },
+      { src: "assets/projects/padelsync/padelsync-registration.png", alt: "PadelSync member registration page", caption: "Member access / Registration" },
+      { src: "assets/projects/padelsync/padelsync-member-welcome.png", alt: "PadelSync member welcome screen", caption: "Member area / Welcome" },
+      { src: "assets/projects/padelsync/padelsync-court-booking.png", alt: "PadelSync court booking details and availability screen", caption: "Reservations / Court booking" },
+      { src: "assets/projects/padelsync/padelsync-my-reservations.png", alt: "PadelSync member reservations page", caption: "Reservations / My reservations" },
+      { src: "assets/projects/padelsync/padelsync-admin-dashboard.png", alt: "PadelSync admin dashboard with court and booking summaries", caption: "Club tools / Dashboard" },
+      { src: "assets/projects/padelsync/padelsync-court-management.png", alt: "PadelSync admin court management screen", caption: "Club tools / Court management" },
+      { src: "assets/projects/padelsync/padelsync-schedule-management.png", alt: "PadelSync schedule and equipment order management", caption: "Club tools / Schedule" },
+      { src: "assets/projects/padelsync/padelsync-user-management.png", alt: "PadelSync administrator user management screen", caption: "Club tools / Users" },
+    ],
     challenge:
       "Help players find and reserve available courts while giving club staff tools to manage schedules.",
     approach:
@@ -69,13 +90,24 @@ const projects = [
     link: null,
     linkLabel: null,
     visual: "restaurant",
-    visualLabel: "Restaurant operations / Service flow",
+    visualLabel: "Juicy Lucy / Restaurant management screens",
+    screenshots: [
+      { src: "assets/projects/restaurant/restaurant-menu.png", alt: "Juicy Lucy restaurant menu and table management interface", caption: "Restaurant tools / Menu" },
+      { src: "assets/projects/restaurant/restaurant-menu-editor.png", alt: "Juicy Lucy menu item editing screen", caption: "Restaurant tools / Menu editor" },
+      { src: "assets/projects/restaurant/restaurant-order-builder.png", alt: "Juicy Lucy order building interface", caption: "Service / Build an order" },
+      { src: "assets/projects/restaurant/restaurant-reservation-form.png", alt: "Juicy Lucy reservation form for booking a table", caption: "Reservations / Booking form" },
+      { src: "assets/projects/restaurant/restaurant-profile.png", alt: "Juicy Lucy staff profile screen", caption: "Staff / Profile" },
+      { src: "assets/projects/restaurant/restaurant-checkout.png", alt: "Juicy Lucy restaurant checkout interface", caption: "Service / Checkout" },
+      { src: "assets/projects/restaurant/restaurant-order-management.png", alt: "Juicy Lucy restaurant order management screen", caption: "Operations / Orders" },
+      { src: "assets/projects/restaurant/restaurant-table-management.png", alt: "Juicy Lucy restaurant table management screen", caption: "Operations / Tables" },
+      { src: "assets/projects/restaurant/restaurant-order-details.png", alt: "Juicy Lucy restaurant order details screen", caption: "Service / Order details" },
+    ],
     challenge:
       "Staff need one workflow for guest bookings, available tables, meals, and checkout.",
     approach:
-      "The project brief describes table and menu management, guest reservations by table and time, meal selection, and a checkout screen.",
+      "The supplied screens cover table and menu management, guest reservations, meal selection, and checkout.",
     contribution:
-      "Project implementation described in the supplied brief. The repository contained no source files or screenshots to verify additional technologies or implementation details.",
+      "The supplied interface captures illustrate the restaurant workflows. Implementation details beyond the visible screens are unverified.",
     more: [],
   },
   {
@@ -119,12 +151,7 @@ list.innerHTML = projects
     <div class="project-top"><span class="mono project-number">${escapeHtml(project.number)} <i>—</i> ${escapeHtml(project.category)}</span></div>
     <div class="project-main">
       <div class="project-visual visual-${escapeHtml(project.visual)}">
-        ${project.visual === "nuvanti" ? `
-          <figure class="nuvanti-photo nuvanti-photo--primary"><img src="/assets/nuvanti-sweatpants.webp" alt="Nuvanti sweatpants product photography from the live store" loading="lazy" /><figcaption>NUV SWEATPANTS</figcaption></figure>
-          <figure class="nuvanti-photo"><img src="/assets/nuvanti-embroidered-top.webp" alt="Nuvanti embroidered top product photography from the live store" loading="lazy" /><figcaption>EMBROIDERED TOP</figcaption></figure>
-          <figure class="nuvanti-photo"><img src="/assets/nuvanti-polo.webp" alt="Nuvanti knitted polo product photography from the live store" loading="lazy" /><figcaption>KNITTED POLO</figcaption></figure>` : ""}
-        ${project.visual === "padel" ? `<div class="project-placeholder" role="img" aria-label="PadelSync project identity card; no project screenshots available"><span class="placeholder-kicker mono">PADELSYNC / MIU SWE230</span><h4 class="placeholder-title">Court<br />booking.</h4><span class="placeholder-note">Project screenshots unavailable<br />Four-student university project</span></div>` : ""}
-        ${project.visual === "restaurant" ? `<div class="project-placeholder project-placeholder--restaurant" role="img" aria-label="Restaurant Management System project identity card; no screenshots available"><span class="placeholder-kicker mono">JUICY LUCY / SYSTEMS PROJECT</span><h4 class="placeholder-title">Restaurant<br />operations.</h4><span class="placeholder-note">Project screenshots unavailable<br />Reservations · tables · menu · checkout</span></div>` : ""}
+        ${project.screenshots ? `<div class="project-gallery" aria-label="${escapeHtml(project.visualLabel)}">${project.screenshots.slice(0, 3).map((photo, index) => `<figure class="project-gallery-item${index === 0 ? " project-gallery-item--lead" : ""}"><img src="/${escapeHtml(photo.src)}" alt="${escapeHtml(photo.alt)}" loading="lazy" /><figcaption>${escapeHtml(photo.caption)}</figcaption></figure>`).join("")}${project.screenshots.length > 3 ? `<details class="gallery-more"><summary>View all ${project.screenshots.length} screenshots <span aria-hidden="true">＋</span></summary><div class="project-gallery project-gallery--more">${project.screenshots.slice(3).map((photo) => `<figure class="project-gallery-item"><img src="/${escapeHtml(photo.src)}" alt="${escapeHtml(photo.alt)}" loading="lazy" /><figcaption>${escapeHtml(photo.caption)}</figcaption></figure>`).join("")}</div></details>` : ""}</div>` : ""}
         ${project.visual === "inventory" ? `<div class="project-placeholder project-placeholder--inventory" role="img" aria-label="Inventory and Sales Tracker project identity card; no screenshots available"><span class="placeholder-kicker mono">ACADEMIC PROJECT / C++</span><h4 class="placeholder-title">Inventory<br />& sales.</h4><span class="placeholder-note">Project screenshots unavailable<br />Product and transaction tracking</span></div>` : ""}
       </div>
       <div class="project-copy"><h3>${escapeHtml(project.name)}</h3><p class="project-description">${escapeHtml(project.description)}</p>
