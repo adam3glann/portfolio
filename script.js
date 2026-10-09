@@ -115,8 +115,8 @@ const escapeHtml = (value) =>
 list.innerHTML = projects
   .map(
     (project) => `
-  <article class="project" id="project-${escapeHtml(project.number)}">
-    <div class="project-top"><span class="mono project-number">${escapeHtml(project.number)} <i>—</i> ${escapeHtml(project.category)}</span><span class="project-marker" aria-hidden="true">↗</span></div>
+  <article class="project project--${escapeHtml(project.number)}" id="project-${escapeHtml(project.number)}">
+    <div class="project-top"><span class="mono project-number">${escapeHtml(project.number)} <i>—</i> ${escapeHtml(project.category)}</span></div>
     <div class="project-main">
       <div class="project-visual visual-${escapeHtml(project.visual)}" role="img" aria-label="Abstract graphic: ${escapeHtml(project.visualLabel)}">
         ${project.visual === "nuvanti" ? '<div class="visual-caption mono">NUVANTI / PRODUCT STUDY</div><div class="fashion-shape"><span></span></div><div class="visual-footer mono"><span>APPAREL / PRESENTATION</span><span>FORM & MATERIAL</span></div>' : ""}
@@ -124,10 +124,10 @@ list.innerHTML = projects
         ${project.visual === "restaurant" ? '<div class="service-flow"><span class="flow-node">01<br><b>BOOK</b></span><i></i><span class="flow-node">02<br><b>SERVE</b></span><i></i><span class="flow-node">03<br><b>CLOSE</b></span></div><div class="visual-footer mono"><span>TABLE SERVICE</span><span>WORKFLOW STUDY</span></div>' : ""}
         ${project.visual === "inventory" ? '<div class="inventory-lines"><span><i>PRODUCT</i><b>STOCK IN</b></span><span><i>CATALOG</i><b>UPDATE</b></span><span><i>SALES</i><b>RECORD</b></span></div><div class="visual-footer mono"><span>INVENTORY & SALES</span><span>RECORD / UPDATE</span></div>' : ""}
       </div>
-      <div class="project-copy"><p class="project-kicker mono">PROJECT ${escapeHtml(project.number)}</p><h3>${escapeHtml(project.name)}</h3><p class="project-description">${escapeHtml(project.description)}</p>
-        ${project.tags.length ? `<div class="project-tags">${project.tags.map((tag) => `<span>${escapeHtml(tag)}</span>`).join("")}</div>` : ""}
+      <div class="project-copy"><h3>${escapeHtml(project.name)}</h3><p class="project-description">${escapeHtml(project.description)}</p>
+        ${project.tags.length ? `<p class="project-tags"><span class="mono">TECHNOLOGY</span> ${project.tags.map(escapeHtml).join(" · ")}</p>` : ""}
         <details class="case-study"><summary>Explore the case study <span aria-hidden="true">＋</span></summary><div class="case-content"><div><span class="mono">THE CHALLENGE</span><p>${escapeHtml(project.challenge)}</p></div><div><span class="mono">THE APPROACH</span><p>${escapeHtml(project.approach)}</p></div><div><span class="mono">MY CONTRIBUTION</span><p>${escapeHtml(project.contribution)}</p></div>${project.more.length ? `<ul>${project.more.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}</ul>` : ""}</div></details>
-        ${project.link ? `<a class="project-link" href="${escapeHtml(project.link)}" target="_blank" rel="noreferrer">${escapeHtml(project.linkLabel)} <span>↗</span></a>` : '<span class="project-link project-link-muted">Academic / project work</span>'}
+        ${project.link ? `<a class="project-link" href="${escapeHtml(project.link)}" target="_blank" rel="noreferrer">${escapeHtml(project.linkLabel)} <span>↗</span></a>` : ""}
       </div>
     </div>
   </article>`,
