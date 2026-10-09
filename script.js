@@ -112,21 +112,38 @@ const projects = [
   },
   {
     number: "04",
-    name: "Inventory & Sales Tracker",
-    category: "ACADEMIC PROJECT · C++",
+    name: "Inventory Management System",
+    category: "INVENTORY MANAGEMENT / C++",
     description:
-      "A console application for product and transaction tracking, modeled around practical business workflows.",
+      "A stock management system with workflows for products, inventory monitoring, purchases, sales, returns, employees, and daily reports.",
     tags: ["C++", "OOP", "Data structures", "File streams"],
     link: null,
     linkLabel: null,
     visual: "inventory",
-    visualLabel: "Inventory / Product and transaction records",
+    visualLabel: "Inventory Management System / Stock and sales workflows",
+    status: "Still in development — I’m actively working on it",
+    screenshots: [
+      { src: "assets/projects/inventory/inventory-dashboard.png", alt: "Inventory system dashboard with stock, sales, and purchase summaries", caption: "Overview / Dashboard" },
+      { src: "assets/projects/inventory/inventory-monitor.png", alt: "Inventory monitoring screen with current stock figures", caption: "Inventory / Monitor" },
+      { src: "assets/projects/inventory/inventory-products.png", alt: "Inventory system product list", caption: "Catalog / Products" },
+      { src: "assets/projects/inventory/inventory-categories.png", alt: "Inventory product categories list", caption: "Catalog / Categories" },
+      { src: "assets/projects/inventory/inventory-stock-levels.png", alt: "Inventory stock levels and low stock information", caption: "Inventory / Stock levels" },
+      { src: "assets/projects/inventory/inventory-stock-settings.png", alt: "Inventory stock settings screen", caption: "Inventory / Stock settings" },
+      { src: "assets/projects/inventory/inventory-purchases.png", alt: "Inventory system purchase records", caption: "Transactions / Purchases" },
+      { src: "assets/projects/inventory/inventory-sales.png", alt: "Inventory system sales records", caption: "Transactions / Sales" },
+      { src: "assets/projects/inventory/inventory-returns.png", alt: "Inventory sales returns screen", caption: "Transactions / Returns" },
+      { src: "assets/projects/inventory/inventory-purchase-returns.png", alt: "Inventory purchase returns screen", caption: "Transactions / Purchase returns" },
+      { src: "assets/projects/inventory/inventory-employees.png", alt: "Inventory system employee records", caption: "Management / Employees" },
+      { src: "assets/projects/inventory/inventory-dashboard-summary.png", alt: "Inventory dashboard with updated stock and sales summaries", caption: "Overview / Dashboard summary" },
+      { src: "assets/projects/inventory/inventory-sales-history.png", alt: "Inventory system sales history", caption: "Transactions / Sales history" },
+      { src: "assets/projects/inventory/inventory-daily-report.png", alt: "Inventory system daily report with sales metrics", caption: "Reports / Daily summary" },
+    ],
     challenge:
-      "Represent product catalogs and transactions in a simple system that can preserve records between runs.",
+      "Keep product stock, sales, and purchasing activity organized in one place.",
     approach:
-      "Used modular classes, object oriented design, core data structures, and file streams for persistence.",
+      "The supplied screens show a dashboard alongside inventory, product, purchase, sales, returns, employee, and report views.",
     contribution:
-      "Individual academic project, as described in the supplied CV.",
+      "This is an individual project and is still in development. I’m actively working on it.",
     more: [],
   },
 ];
@@ -148,11 +165,10 @@ list.innerHTML = projects
   .map(
     (project) => `
   <article class="project project--${escapeHtml(project.number)}" id="project-${escapeHtml(project.number)}">
-    <div class="project-top"><span class="mono project-number">${escapeHtml(project.number)} <i>—</i> ${escapeHtml(project.category)}</span></div>
+    <div class="project-top"><span class="mono project-number">${escapeHtml(project.number)} <i>—</i> ${escapeHtml(project.category)}</span>${project.status ? `<span class="project-status"><i aria-hidden="true"></i>${escapeHtml(project.status)}</span>` : ""}</div>
     <div class="project-main">
       <div class="project-visual visual-${escapeHtml(project.visual)}">
         ${project.screenshots ? `<div class="project-gallery" aria-label="${escapeHtml(project.visualLabel)}">${project.screenshots.slice(0, 3).map((photo, index) => `<figure class="project-gallery-item${index === 0 ? " project-gallery-item--lead" : ""}"><img src="/${escapeHtml(photo.src)}" alt="${escapeHtml(photo.alt)}" loading="lazy" /><figcaption>${escapeHtml(photo.caption)}</figcaption></figure>`).join("")}${project.screenshots.length > 3 ? `<details class="gallery-more"><summary>View all ${project.screenshots.length} screenshots <span aria-hidden="true">＋</span></summary><div class="project-gallery project-gallery--more">${project.screenshots.slice(3).map((photo) => `<figure class="project-gallery-item"><img src="/${escapeHtml(photo.src)}" alt="${escapeHtml(photo.alt)}" loading="lazy" /><figcaption>${escapeHtml(photo.caption)}</figcaption></figure>`).join("")}</div></details>` : ""}</div>` : ""}
-        ${project.visual === "inventory" ? `<div class="project-placeholder project-placeholder--inventory" role="img" aria-label="Inventory and Sales Tracker project identity card; no screenshots available"><span class="placeholder-kicker mono">ACADEMIC PROJECT / C++</span><h4 class="placeholder-title">Inventory<br />& sales.</h4><span class="placeholder-note">Project screenshots unavailable<br />Product and transaction tracking</span></div>` : ""}
       </div>
       <div class="project-copy"><h3>${escapeHtml(project.name)}</h3><p class="project-description">${escapeHtml(project.description)}</p>
         ${project.tags.length ? `<p class="project-tags"><span class="mono">TECHNOLOGY</span> ${project.tags.map(escapeHtml).join(" · ")}</p>` : ""}

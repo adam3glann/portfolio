@@ -2,7 +2,7 @@
 
 A lightweight, editorial portfolio built with semantic HTML, CSS, and vanilla JavaScript. There is no build step or runtime dependency. Project content is maintained in the `projects` array near the top of `script.js`.
 
-The hero uses product photography from the live [Nuvanti site](https://nuvanti-shop.pages.dev/). The Nuvanti, PadelSync, and Restaurant Management System sections use screenshots supplied for this portfolio, stored locally under `assets/projects/`; each gallery shows three captures initially and lets visitors expand the rest. The restaurant gallery omits one supplied image that shows source code rather than the interface. Inventory & Sales Tracker remains a project identity card because no screenshots were supplied for it. ARQEVIN remains a separate company venture.
+The hero uses product photography from the live [Nuvanti site](https://nuvanti-shop.pages.dev/). The Nuvanti, PadelSync, Restaurant Management System, and Inventory Management System sections use screenshots supplied for this portfolio, stored locally under `assets/projects/`; each gallery shows three captures initially and lets visitors expand the rest. The inventory system is still in development. The restaurant gallery omits one supplied image that shows source code rather than the interface. ARQEVIN remains a separate company venture.
 
 ## Run locally
 
