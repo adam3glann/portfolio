@@ -1,6 +1,6 @@
 # Adam Adel — Personal Portfolio
 
-A lightweight, static portfolio built with semantic HTML, CSS, and vanilla JavaScript. There is no build step or runtime dependency. Project content is maintained in the `projects` array near the top of `script.js`.
+A lightweight, editorial portfolio built with semantic HTML, CSS, and vanilla JavaScript. There is no build step or runtime dependency. Project content is maintained in the `projects` array near the top of `script.js`.
 
 ## Run locally
 
@@ -26,4 +26,4 @@ npx wrangler pages deploy . --project-name adam-adel-portfolio
 
 ## Personal links to configure
 
-The email and phone number come from the supplied CV. The CVs list GitHub and LinkedIn without their profile URLs, so those links are omitted until the URLs are known. Project URLs can be added in the `projects` array in `script.js`.
+The email and phone number come from the supplied CV. The CVs list GitHub and LinkedIn without their profile URLs; add the verified URLs to the `socialProfiles` object in `script.js` and the links will appear in the contact section and footer. Project URLs can be added in the `projects` array in `script.js`.
