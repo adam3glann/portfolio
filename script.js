@@ -118,10 +118,24 @@ list.innerHTML = projects
   <article class="project project--${escapeHtml(project.number)}" id="project-${escapeHtml(project.number)}">
     <div class="project-top"><span class="mono project-number">${escapeHtml(project.number)} <i>—</i> ${escapeHtml(project.category)}</span></div>
     <div class="project-main">
-      <div class="project-visual visual-${escapeHtml(project.visual)}" role="img" aria-label="Abstract graphic: ${escapeHtml(project.visualLabel)}">
-        ${project.visual === "nuvanti" ? '<div class="visual-caption mono">NUVANTI / PRODUCT STUDY</div><div class="fashion-shape"><span></span></div><div class="visual-footer mono"><span>APPAREL / PRESENTATION</span><span>FORM & MATERIAL</span></div>' : ""}
-        ${project.visual === "padel" ? '<div class="court-lines"><span></span><span></span><span></span></div><div class="court-label mono">PADELSYNC / COURT STUDY</div><div class="court-ball"></div><div class="visual-footer mono"><span>FIND A COURT</span><span>RESERVE A SLOT</span></div>' : ""}
-        ${project.visual === "restaurant" ? '<div class="service-flow"><span class="flow-node">01<br><b>BOOK</b></span><i></i><span class="flow-node">02<br><b>SERVE</b></span><i></i><span class="flow-node">03<br><b>CLOSE</b></span></div><div class="visual-footer mono"><span>TABLE SERVICE</span><span>WORKFLOW STUDY</span></div>' : ""}
+      <div class="project-visual visual-${escapeHtml(project.visual)}" role="img" aria-label="Conceptual visual: ${escapeHtml(project.visualLabel)}">
+        ${project.visual === "nuvanti" ? `
+          <div class="mockup-disclaimer mono">CONCEPTUAL STORE VISUAL · NOT A PROJECT SCREENSHOT</div>
+          <div class="nuvanti-window">
+            <div class="nuvanti-nav"><strong>NUVANTI</strong><span>COLLECTION</span><span>ABOUT</span><span>SEARCH&nbsp; ↗</span></div>
+            <div class="nuvanti-copy"><span class="mono">CLOTHING / INDEPENDENT PROJECT</span><h4>Clothing<br />collection.</h4><p>Product presentation<br />for a clothing brand.</p><span class="nuvanti-cta">VIEW COLLECTION&nbsp; ↗</span></div>
+            <div class="nuvanti-product" aria-hidden="true"><div class="fashion-shape"></div><span>ABSTRACT FORM STUDY</span></div>
+            <div class="nuvanti-baseline mono"><span>AN E-COMMERCE EXPERIENCE</span><span>CONCEPT VISUAL / NOT A SCREENSHOT</span></div>
+          </div>` : ""}
+        ${project.visual === "padel" ? `
+          <div class="mockup-disclaimer mono">CONCEPTUAL INTERFACE · NOT A PROJECT SCREENSHOT</div>
+          <div class="padel-window">
+            <aside class="padel-side"><strong>PADELSYNC</strong><span class="mono">MEMBER SPACE</span><i>Find a court</i><i>My bookings</i><i>Account</i><span class="padel-side-foot mono">MIU · SWE230</span></aside>
+            <div class="padel-main"><div class="padel-top mono"><span>RESERVATIONS / NEW</span><span>MEMBER&nbsp; ↗</span></div><h4>Find a court.</h4><p>Choose a court and a time to continue.</p><div class="booking-steps"><span><b>01</b> COURT</span><i></i><span><b>02</b> TIME</span><i></i><span><b>03</b> CONFIRM</span></div><div class="booking-panel"><div class="court-illustration"><div class="court-lines"><i></i><i></i></div><span class="court-dot"></span></div><div class="booking-select"><span class="mono">YOUR RESERVATION</span><strong>Select a court</strong><div>Choose a date <b>＋</b></div><div>Choose a time <b>＋</b></div><button type="button" disabled>CONTINUE</button></div></div></div>
+          </div>` : ""}
+        ${project.visual === "restaurant" ? `
+          <div class="mockup-disclaimer mono">CONCEPTUAL INTERFACE · NOT A PROJECT SCREENSHOT</div>
+          <div class="restaurant-window"><aside class="restaurant-side"><strong>JUICY LUCY</strong><span class="mono">MANAGEMENT</span><i>Reservations</i><i>Tables</i><i>Menu</i><i>Checkout</i></aside><div class="restaurant-main"><div class="restaurant-top"><span class="mono">SERVICE DESK / RESERVATION</span><span>STAFF VIEW</span></div><h4>Guest booking</h4><p>Manage a reservation from table to checkout.</p><div class="service-steps"><span>01&nbsp; TABLE</span><i></i><span>02&nbsp; MEALS</span><i></i><span>03&nbsp; CHECKOUT</span></div><div class="reservation-sheet"><div class="reservation-field"><span class="mono">RESERVATION</span><b>Select a guest</b><b>Select table & time</b></div><div class="reservation-field"><span class="mono">ORDER</span><b>Add meals from menu</b><b>Review and check out&nbsp; ↗</b></div></div></div></div>` : ""}
         ${project.visual === "inventory" ? '<div class="inventory-lines"><span><i>PRODUCT</i><b>STOCK IN</b></span><span><i>CATALOG</i><b>UPDATE</b></span><span><i>SALES</i><b>RECORD</b></span></div><div class="visual-footer mono"><span>INVENTORY & SALES</span><span>RECORD / UPDATE</span></div>' : ""}
       </div>
       <div class="project-copy"><h3>${escapeHtml(project.name)}</h3><p class="project-description">${escapeHtml(project.description)}</p>
@@ -169,8 +183,8 @@ nav.querySelectorAll("a").forEach((link) =>
 
 const sections = [...document.querySelectorAll("main section[id]")];
 const navLinks = [...nav.querySelectorAll("a")];
-document.documentElement.classList.add("js-motion");
 if ("IntersectionObserver" in window) {
+  document.documentElement.classList.add("js-motion");
   const revealObserver = new IntersectionObserver(
     (entries, observer) =>
       entries.forEach((entry) => {
@@ -197,4 +211,8 @@ if ("IntersectionObserver" in window) {
     { rootMargin: "-30% 0px -60% 0px" },
   );
   sections.forEach((section) => observer.observe(section));
+} else {
+  document.querySelectorAll(".reveal").forEach((item) =>
+    item.classList.add("is-visible"),
+  );
 }

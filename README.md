@@ -2,6 +2,8 @@
 
 A lightweight, editorial portfolio built with semantic HTML, CSS, and vanilla JavaScript. There is no build step or runtime dependency. Project content is maintained in the `projects` array near the top of `script.js`.
 
+The architectural hero is a local SVG illustration. The Nuvanti, PadelSync, and restaurant project panels are conceptual HTML/CSS interface visuals, visibly labeled as concepts rather than screenshots of the live products. No project screenshot assets were present in the repository.
+
 ## Run locally
 
 Open `index.html` directly, or serve the folder locally:
