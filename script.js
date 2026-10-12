@@ -174,7 +174,7 @@ list.innerHTML = projects
       <div class="project-copy"><h3>${escapeHtml(project.name)}</h3><p class="project-description">${escapeHtml(project.description)}</p>
         ${project.tags.length ? `<p class="project-tags"><span class="mono">TECHNOLOGY</span> ${project.tags.map(escapeHtml).join(" · ")}</p>` : ""}
         <details class="case-study"><summary>Explore the case study <span aria-hidden="true">＋</span></summary><div class="case-content"><div><span class="mono">THE CHALLENGE</span><p>${escapeHtml(project.challenge)}</p></div><div><span class="mono">THE APPROACH</span><p>${escapeHtml(project.approach)}</p></div><div><span class="mono">MY CONTRIBUTION</span><p>${escapeHtml(project.contribution)}</p></div>${project.more.length ? `<ul>${project.more.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}</ul>` : ""}</div></details>
-        ${project.link ? `<a class="project-link" href="${escapeHtml(project.link)}" target="_blank" rel="noreferrer">${escapeHtml(project.linkLabel)} <span>↗</span></a>` : ""}
+        ${project.link ? `<a class="project-link" href="${escapeHtml(project.link)}" target="_blank" rel="noreferrer">${escapeHtml(project.linkLabel)} <svg class="arrow-icon" aria-hidden="true" viewBox="0 0 20 20"><path d="M4 16 16 4M7 4h9v9" /></svg></a>` : ""}
       </div>
     </div>
   </article>`,
@@ -188,7 +188,7 @@ const socialLinks = Object.entries(socialProfiles).filter(([, url]) =>
 const profileMarkup = socialLinks
   .map(
     ([name, url]) =>
-      `<a href="${escapeHtml(url)}" target="_blank" rel="noreferrer">${escapeHtml(name.toUpperCase())} ↗</a>`,
+      `<a href="${escapeHtml(url)}" target="_blank" rel="noreferrer">${escapeHtml(name.toUpperCase())} <svg class="arrow-icon" aria-hidden="true" viewBox="0 0 20 20"><path d="M4 16 16 4M7 4h9v9" /></svg></a>`,
   )
   .join("");
 document.querySelector("#social-links").innerHTML = profileMarkup;
