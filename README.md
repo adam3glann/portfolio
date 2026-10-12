@@ -4,10 +4,11 @@
   <p><strong>Personal portfolio · Cairo, Egypt</strong></p>
   <p>Software engineering · Business systems · Practical AI</p>
 
+  <p><a href="https://adam-adel-portfolio.pages.dev/"><strong>Visit the live portfolio ↗</strong></a></p>
+
   <p>
     <a href="#selected-work">Selected work</a> ·
-    <a href="#about-the-site">About the site</a> ·
-    <a href="#run-locally">Run locally</a>
+    <a href="#about-the-site">About the site</a>
   </p>
 
   <p>
@@ -65,30 +66,6 @@ The portfolio is built with semantic HTML, responsive CSS, and vanilla JavaScrip
 - Case-study sections for project challenges, approaches, and contributions
 - Reduced-motion support and keyboard-visible focus styles
 - Local project images; only web fonts and badge graphics load from external hosts
-
-## Run locally
-
-From the project folder, run:
-
-```sh
-npx serve .
-```
-
-You can also open `index.html` directly in a browser. A local server gives the most reliable behavior for root-relative asset paths.
-
-## Deploy
-
-This static site can be deployed to Cloudflare Pages without a build command:
-
-1. Connect the repository to a Cloudflare Pages project.
-2. Choose the **None** framework preset.
-3. Leave the build command blank and set the build output directory to `/`.
-
-Or deploy from the command line with Wrangler:
-
-```sh
-npx wrangler pages deploy . --project-name adam-adel-portfolio
-```
 
 ## Update the content
 
