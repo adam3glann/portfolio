@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="380" viewBox="0 0 1200 380" role="img" aria-labelledby="title description">
+  <title id="title">Adam Adel — Software developer</title>
+  <desc id="description">A dark green portfolio banner with the message: Thoughtful software. Useful outcomes.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1200" y2="380" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#17372e" />
+      <stop offset="1" stop-color="#1e4a3b" />
+    </linearGradient>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientTransform="matrix(0 240 -300 0 1030 70)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#c9ec7c" stop-opacity=".18" />
+      <stop offset="1" stop-color="#c9ec7c" stop-opacity="0" />
+    </radialGradient>
+    <pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse">
+      <path d="M36 0H0v36" fill="none" stroke="#f7f8f5" stroke-opacity=".055" />
+    </pattern>
+  </defs>
+  <rect width="1200" height="380" rx="24" fill="url(#background)" />
+  <rect width="1200" height="380" rx="24" fill="url(#grid)" />
+  <rect width="1200" height="380" rx="24" fill="url(#glow)" />
+  <path d="M935 0h265v380H935z" fill="#c9ec7c" fill-opacity=".035" />
+  <path d="M1000 0h200v380h-200z" fill="#c9ec7c" fill-opacity=".035" />
+  <path d="M1065 0h135v380h-135z" fill="#c9ec7c" fill-opacity=".035" />
+  <circle cx="1035" cy="189" r="118" fill="none" stroke="#c9ec7c" stroke-opacity=".5" />
+  <circle cx="1035" cy="189" r="86" fill="none" stroke="#f7f8f5" stroke-opacity=".22" />
+  <circle cx="1035" cy="189" r="54" fill="#c9ec7c" fill-opacity=".14" />
+  <path d="M980 244 1090 134M1044 134h46v46" fill="none" stroke="#c9ec7c" stroke-linecap="round" stroke-linejoin="round" stroke-width="5" />
+  <rect x="64" y="57" width="38" height="38" rx="11" fill="#c9ec7c" />
+  <text x="83" y="82" fill="#17372e" font-family="Arial,sans-serif" font-size="18" font-weight="700" text-anchor="middle">A</text>
+  <text x="118" y="82" fill="#d4e0d6" font-family="Arial,sans-serif" font-size="15" font-weight="600" letter-spacing="2">ADAM ADEL  /  SOFTWARE DEVELOPER</text>
+  <text x="64" y="176" fill="#f7f8f5" font-family="Arial,sans-serif" font-size="57" font-weight="700" letter-spacing="-2">Thoughtful software.</text>
+  <text x="64" y="244" fill="#c9ec7c" font-family="Arial,sans-serif" font-size="57" font-weight="700" letter-spacing="-2">Useful outcomes.</text>
+  <path d="M64 290h622" stroke="#d4e0d6" stroke-opacity=".32" />
+  <text x="64" y="326" fill="#d4e0d6" font-family="Arial,sans-serif" font-size="14" letter-spacing="2">SOFTWARE ENGINEERING  ·  BUSINESS SYSTEMS  ·  PRACTICAL AI</text>
+  <text x="1137" y="337" fill="#d4e0d6" font-family="Arial,sans-serif" font-size="13" letter-spacing="2" text-anchor="end">CAIRO, EGYPT</text>
+</svg>
