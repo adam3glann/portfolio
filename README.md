@@ -68,11 +68,9 @@ The portfolio is built with semantic HTML, responsive CSS, and vanilla JavaScrip
 
 ## Run locally
 
-Clone the repository and serve the folder:
+From the project folder, run:
 
 ```sh
-git clone https://github.com/adam3glann/portfolio.git
-cd portfolio
 npx serve .
 ```
 
@@ -98,6 +96,10 @@ npx wrangler pages deploy . --project-name adam-adel-portfolio
 - **Project screenshots:** add images under `assets/projects/` and list their paths, alt text, and captions in that project’s `screenshots` array.
 - **Social links:** add verified profile URLs to the `socialProfiles` object in [`script.js`](script.js); empty values stay hidden.
 - **Visual style:** edit [`styles.css`](styles.css).
+
+## Ownership
+
+© 2026 Adam Adel. All rights reserved. This repository does not include an open-source license. Public visibility still allows people to view and fork the source through GitHub. If you want to restrict access to the code, make the repository private; the deployed portfolio can remain public.
 
 ---
 
